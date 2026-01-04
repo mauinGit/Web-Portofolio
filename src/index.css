@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@layer base {
+    body {
+        font-family: "Poppins", sans-serif;
+    }
+}
+
+@font-face {
+  font-family: "remixicon";
+  src: url("/fonts/remixicon.woff2") format("woff2"),
+       url("/fonts/remixicon.woff") format("woff"),
+       url("/fonts/remixicon.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="ri-"],
+[class*=" ri-"] {
+  font-family: "remixicon" !important;
+  font-style: normal;
+  font-weight: normal;
+  display: inline-block;
+  line-height: 1;
+}
