@@ -126,10 +126,10 @@ function App() {
                   />
                 </div>
                 <div className="">
-                  <h1 className="font-semibold text-[12px] sm:text-[14px] xl:text-[20px]">
+                  <h1 className="font-semibold text-[12px] sm:text-[14px] lg:text-[16d8px] xl:text-[20px]">
                     {tool.nama}
                   </h1>
-                  <p className="opacity-70 text-[10px] sm:text-[12px] lg:text-[16px]">
+                  <p className="opacity-70 text-[10px] sm:text-[12px] lg:text-[14px]">
                     {tool.ket}
                   </p>
                 </div>
@@ -150,31 +150,30 @@ function App() {
             Berikut adalah project yang sudah saya buat
           </p>
         </div>
-        <div className="grid grid-cols-3 gap-6">
-          <div className="border border-[#4D869C] bg-[#D4F6FF]/30 rounded-xl p-4">
-            <img src={Image.HeroImage} alt="ini gambar" className="object-cover items-center w-full h-[260px]" />
-            <div className="mt-2">
-              <h3 className="py-2 font-bold text-xl">Website Sekolah</h3>
-              <p className="justify-center">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Quisquam, quod.
-              </p>
-              <div className="flex gap-2">
-                <div className="border border-[#4D869C] rounded-xl p-2 w-fit mt-2 bg-[#D4F6FF]/30 hover:bg-[#C6E7FF]/75">
-                  <p className="font-semibold">HTML</p>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {listProyek.map((proyek) => (
+            <div className="border border-[#4D869C] border-b-10 bg-[#D4F6FF]/30 rounded-xl p-4" key={proyek.id}>
+              <img src={proyek.gambar} alt="ini gambar" className="object-cover items-center w-full h-[200px]" />
+              <div className="my-4">
+                <h3 className="py-2 font-bold text-xl">{proyek.nama}</h3>
+                <p className="justify-center opacity-70 mb-4">{proyek.desk}</p>
+                <div className="flex flex-wrap gap-2 justify">
+                  {proyek.tools.map((tool, index) => (
+                    <div className="hover:border hover:border-[#4D869C] bg-[#4D869C] hover:bg-white text-white hover:text-[#4D869C] rounded-xl p-2 mt-2" key={index}>
+                      <p className="font-semibold">{tool}</p>
+                    </div>
+                  ))}
                 </div>
-                <div className="border border-[#4D869C] rounded-xl p-2 w-fit mt-2 bg-[#D4F6FF]/30 hover:bg-[#C6E7FF]/75">
-                  <p className="font-semibold">HTML</p>
-                </div>
-                <div className="border border-[#4D869C] rounded-xl p-2 w-fit mt-2 bg-[#D4F6FF]/30 hover:bg-[#C6E7FF]/75">
-                  <p className="font-semibold">HTML</p>
-                </div>
+                {/* <div className="text-center mt-4">
+                  <a
+                    href="#"
+                    className="bg-[#4D869C] rounded-lg text-white hover:bg-white hover:text-[#4D869C] p-2 block border">
+                    Lihat Website
+                  </a>
+                </div> */}
               </div>
             </div>
-            <div className="grid justify-center p-2">
-              <a href="#" className="border border-[#4D869C] rounded-lg bg-white text-[#4D869C] hover:bg-[#C6E7FF]/75 p-2">Lihat Website</a>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
       {/* End Projects Section */}
