@@ -104,15 +104,15 @@ function App() {
 
         <div className="tools mt-10 lg:mt-15 xl:mt-20">
           <div>
-            <h1 className="text-[#4D869C] text-xl sm:text-2xl md:text-4xl xl:text-5xl font-bold text-center">
+            <h1 className="text-[#4D869C] text-xl sm:text-3xl md:text-4xl xl:text-5xl font-bold text-center">
               Tools yang digunakan
             </h1>
-            <p className="py-8 text-center opacity-70">
+            <p className="py-3 sm:py-4 lg:py-8 text-center opacity-70 text-[10px] sm:text-sm xl:text-lg">
               Berikut adalah tools yang saya gunakan dalam pengembangan aplikasi
               yang saya gunakan
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {listTools.map((tool) => (
               <div
                 className="group flex border border-[#4D869C] border-b-10 bg-[#D4F6FF]/30 hover:bg-[#C6E7FF]/75 gap-2 p-2 rounded-xl"
@@ -143,23 +143,23 @@ function App() {
       {/* Projects Section */}
       <div className="project mt-10 lg:mt-15 xl:mt-20">
         <div>
-          <h1 className="text-[#4D869C] xl:text-5xl font-bold text-center">
+          <h1 className="text-[#4D869C] text-xl sm:text-3xl md:text-4xl xl:text-5xl font-bold text-center">
             My Projects
           </h1>
-          <p className="py-8 text-center opacity-70">
+          <p className="py-3 sm:py-4 lg:py-8 text-center opacity-70 text-[12px] sm:text-sm xl:text-lg">
             Berikut adalah project yang sudah saya buat
           </p>
         </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-6">
           {listProyek.map((proyek) => (
             <div className="border border-[#4D869C] border-b-10 bg-[#D4F6FF]/30 rounded-xl p-4" key={proyek.id}>
               <img src={proyek.gambar} alt="ini gambar" className="object-cover items-center w-full h-[200px]" />
               <div className="my-4">
-                <h3 className="py-2 font-bold text-xl">{proyek.nama}</h3>
-                <p className="justify-center opacity-70 mb-4">{proyek.desk}</p>
+                <h3 className="py-1 md:py-2 font-bold text-xl">{proyek.nama}</h3>
+                <p className="text-[12px] sm:text-sm xl:text-lg justify-center opacity-70 md:mb-4">{proyek.desk}</p>
                 <div className="flex flex-wrap gap-2 justify">
                   {proyek.tools.map((tool, index) => (
-                    <div className="hover:border hover:border-[#4D869C] bg-[#4D869C] hover:bg-white text-white hover:text-[#4D869C] rounded-xl p-2 mt-2" key={index}>
+                    <div className="text-[12px] sm:text-sm md:text-[12px] xl:text-lg hover:border hover:border-[#4D869C] bg-[#4D869C] hover:bg-white text-white hover:text-[#4D869C] rounded-xl p-2 mt-2" key={index}>
                       <p className="font-semibold">{tool}</p>
                     </div>
                   ))}
