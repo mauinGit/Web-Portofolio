@@ -34,10 +34,10 @@ function App() {
           </p>
           <div className="flex gap-6 my-4 md:my-8">
             <a
-              href="#"
+              href="https://drive.google.com/file/d/14mQB6FGaFn485TGck8ROwTVzC4ECTLNX/view?usp=drive_link"
               className="bg-[#4D869C] text-[10px] sm:text-xs md:text-sm lg:text-base xl:text-lg text-white hover:bg-[#4D869C]/80 px-4 py-2 rounded-lg"
             >
-              Download CV <i className="ri-file-download-line"></i>
+              See My CV <i className="ri-file-download-line"></i>
             </a>
           </div>
         </div>
@@ -228,7 +228,7 @@ function App() {
               <input
                 type="text"
                 name="nama"
-                className="w-full sm:w-1/2 lg:w-1/3 border border-[#4D869C] text-[12px] sm:text-sm lg:text-lg rounded-xl p-2"
+                className="border border-[#4D869C] text-[12px] sm:text-sm lg:text-lg rounded-xl p-2 border-2"
                 placeholder="Masukkan Nama..."
                 required
               />
