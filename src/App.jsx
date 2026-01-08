@@ -215,7 +215,7 @@ function App() {
           <form
             action="https://formsubmit.co/maulanaadiatma3133@gmail.com"
             method="POST"
-            className="flex flex-col bg-[#4D869C]/25 border border-[#4D869C] p-8 rounded-xl my-8 mx-auto w-fit sm:w-full"
+            className="flex flex-col bg-[#4D869C]/25 border border-[#4D869C] p-8 rounded-xl my-8 mx-auto sm:w-full"
             autocomplete="off"
           >
             <div className="flex flex-col">
@@ -266,7 +266,7 @@ function App() {
             <div className="text-center my-4 sm:my-6">
               <button
                 type="submit"
-                className="text-white font-semibold w-full text-[12px] sm:text-sm lg:text-lg bg-[#4D869C]/50 rounded-xl p-2 hover:bg-[#4D869C]"
+                className="text-white font-semibold w-fit px-4 text-[12px] sm:text-sm lg:text-lg bg-[#4D869C]/50 rounded-xl p-2 hover:bg-[#4D869C]"
               >
                 Kirim
               </button>
