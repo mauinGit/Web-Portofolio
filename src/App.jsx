@@ -8,10 +8,10 @@ function App() {
     <>
       {/* Hero Section */}
       <div className="hero grid grid-cols-1 md:grid-cols-2">
-        <div>
+        <div className="animate__animated animate__fadeInLeft animate__delay-2s">
           <div className="bg-[#7AB2B2]/30 p-4 rounded-xl gap-6 md:gap-2 flex items-center md:w-fit md:mt-4">
             <img
-              src={Image.HeroImage}
+              src={Image.LogoImage}
               alt=""
               className="w-10 h-10 object-cover rounded-lg"
             />
@@ -48,7 +48,7 @@ function App() {
           </div>
         </div>
 
-        <div className="">
+        <div className="animate__animated animate__fadeInRight animate__delay-3s">
           <img
             src={Image.HeroImage}
             alt=""
@@ -59,7 +59,7 @@ function App() {
       {/* End Hero Section */}
 
       {/* About Section */}
-      <div className="about mt-10 lg:mt-15 xl:mt-20">
+      <div className="about mt-10 lg:mt-15 xl:mt-20 animate__animated">
         <div className="bg-[#4D869C]/30 p-4 xl:p-8 rounded-xl md:mx-15 xl:mx-40">
           <div>
             <h1 className="text-[#4D869C] text-xl sm:text-2xl md:text-4xl xl:text-5xl font-bold text-center">
@@ -102,12 +102,12 @@ function App() {
           </div>
         </div>
 
-        <div className="tools mt-10 lg:mt-15 xl:mt-20">
+        <div className="tools mt-10 lg:mt-15 xl:mt-20 sm:py-10">
           <div>
             <h1 className="text-[#4D869C] text-xl sm:text-3xl md:text-4xl xl:text-5xl font-bold text-center">
-              Tools yang digunakan
+              Tools
             </h1>
-            <p className="py-3 sm:py-4 lg:py-8 text-center opacity-70 text-[10px] sm:text-sm xl:text-lg">
+            <p className="py-3 sm:py-4 lg:py-8 text-center opacity-70 text-[10px] sm:text-sm lg:text-lg">
               Berikut adalah tools yang saya gunakan dalam pengembangan aplikasi
               yang saya gunakan
             </p>
@@ -146,20 +146,20 @@ function App() {
           <h1 className="text-[#4D869C] text-xl sm:text-3xl md:text-4xl xl:text-5xl font-bold text-center">
             My Projects
           </h1>
-          <p className="py-3 sm:py-4 lg:py-8 text-center opacity-70 text-[12px] sm:text-sm xl:text-lg">
+          <p className="py-3 sm:py-4 lg:py-8 text-center opacity-70 text-[12px] sm:text-sm lg:text-lg">
             Berikut adalah project yang sudah saya buat
           </p>
         </div>
-        <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
           {listProyek.map((proyek) => (
             <div className="border border-[#4D869C] border-b-10 bg-[#D4F6FF]/30 rounded-xl p-4" key={proyek.id}>
-              <img src={proyek.gambar} alt="ini gambar" className="object-cover items-center w-full h-[200px]" />
+              <img src={proyek.gambar} alt="ini gambar" className="object-cover items-center w-full sm:h-[245px] md:h-[150px] lg:h-[225px] h-[120px]" />
               <div className="my-4">
                 <h3 className="py-1 md:py-2 font-bold text-xl">{proyek.nama}</h3>
                 <p className="text-[12px] sm:text-sm xl:text-lg justify-center opacity-70 md:mb-4">{proyek.desk}</p>
                 <div className="flex flex-wrap gap-2 justify">
                   {proyek.tools.map((tool, index) => (
-                    <div className="text-[12px] sm:text-sm md:text-[12px] xl:text-lg hover:border hover:border-[#4D869C] bg-[#4D869C] hover:bg-white text-white hover:text-[#4D869C] rounded-xl p-2 mt-2" key={index}>
+                    <div className="text-[10px] sm:text-sm md:text-[12px] xl:text-lg hover:border hover:border-[#4D869C] bg-[#4D869C] hover:bg-white text-white hover:text-[#4D869C] rounded-xl p-2 mt-2" key={index}>
                       <p className="font-semibold">{tool}</p>
                     </div>
                   ))}
@@ -177,6 +177,34 @@ function App() {
         </div>
       </div>
       {/* End Projects Section */}
+
+      {/* Contact Section */}
+      <div className="contact my-10 md:my-20 ">
+        <div className="flex flex-col items-center">
+          <h1 className="text-2xl sm:text-3xl xl:text-5xl text-[#4D869C] font-bold pb-4">Contact Me</h1>
+          <p className="opacity-70 text-[12px] sm:text-sm lg:text-lg text-center">Jika ingin memberi feedback silahkan hubungi saya</p>
+        </div>
+        <div className="md:mx-25 xl:mx-50">
+          <form action="https://formsubmit.co/adiyangkedua23@gmail.com" method="POST" className="flex flex-col bg-[#4D869C]/25 border border-[#4D869C] p-8 rounded-xl my-8 mx-auto w-fit sm:w-full" autocomplete="off">
+          <div className="flex flex-col">
+            <label htmlFor="nama" className="font-semibold text-[12px] sm:text-sm lg:text-lg">Nama Lengkap</label>
+            <input type="text" name="nama" className="border border-[#4D869C] text-[12px] sm:text-sm lg:text-lg rounded-xl p-2 border-2" placeholder="Masukkan Nama..." required />
+          </div>
+          <div className="flex flex-col my-6">
+            <label htmlFor="email" className="font-semibold text-[12px] sm:text-sm lg:text-lg">Email</label>
+            <input type="email" name="email" className="border border-[#4D869C] text-[12px] sm:text-sm lg:text-lg rounded-xl p-2 border-2" placeholder="Masukkan Email..." required />
+          </div>
+          <div className="flex flex-col">
+            <label htmlFor="pesan" className="font-semibold text-[12px] sm:text-sm lg:text-lg">Pesan</label>
+            <textarea name="pesan" id="pesan" cols="15" className="border border-[#4D869C] text-[12px] sm:text-sm lg:text-lg rounded-xl p-2 border-2" rows="7"></textarea>
+          </div>
+          <div className="text-center my-4 sm:my-6">
+            <button type="submit" className="text-white font-semibold w-full text-[12px] sm:text-sm lg:text-lg bg-[#4D869C]/50 rounded-xl p-2 hover:bg-[#4D869C]">Kirim</button>
+          </div>
+        </form>
+        </div>
+      </div>
+      {/* End Contact Section */}
     </>
   );
 }
