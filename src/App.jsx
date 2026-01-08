@@ -178,24 +178,24 @@ function App() {
           <h1 className="text-2xl sm:text-3xl xl:text-5xl text-[#4D869C] font-bold pb-4">Contact Me</h1>
           <p className="opacity-70 text-[12px] sm:text-sm lg:text-lg text-center">Jika ingin memberi feedback silahkan hubungi saya</p>
         </div>
-        <div className="md:mx-25 xl:mx-50">
+        <div className="mx-0 md:mx-25 xl:mx-50">
           <form action="https://formsubmit.co/maulanaadiatma3133@gmail.com" method="POST" className="flex flex-col bg-[#4D869C]/25 border border-[#4D869C] p-8 rounded-xl my-8 mx-auto w-fit sm:w-full" autocomplete="off">
-          <div className="flex flex-col">
-            <label htmlFor="nama" className="font-semibold text-[12px] sm:text-sm lg:text-lg">Nama Lengkap</label>
-            <input type="text" name="nama" className="border border-[#4D869C] text-[12px] sm:text-sm lg:text-lg rounded-xl p-2 border-2" placeholder="Masukkan Nama..." required />
-          </div>
-          <div className="flex flex-col my-6">
-            <label htmlFor="email" className="font-semibold text-[12px] sm:text-sm lg:text-lg">Email</label>
-            <input type="email" name="email" className="border border-[#4D869C] text-[12px] sm:text-sm lg:text-lg rounded-xl p-2 border-2" placeholder="Masukkan Email..." required />
-          </div>
-          <div className="flex flex-col">
-            <label htmlFor="pesan" className="font-semibold text-[12px] sm:text-sm lg:text-lg">Pesan</label>
-            <textarea name="pesan" id="pesan" cols="15" className="border border-[#4D869C] text-[12px] sm:text-sm lg:text-lg rounded-xl p-2 border-2" rows="7"></textarea>
-          </div>
-          <div className="text-center my-4 sm:my-6">
-            <button type="submit" className="text-white font-semibold w-full text-[12px] sm:text-sm lg:text-lg bg-[#4D869C]/50 rounded-xl p-2 hover:bg-[#4D869C]">Kirim</button>
-          </div>
-        </form>
+            <div className="flex flex-col">
+              <label htmlFor="nama" className="font-semibold text-[12px] sm:text-sm lg:text-lg">Nama Lengkap</label>
+              <input type="text" name="nama" className="border border-[#4D869C] text-[12px] sm:text-sm lg:text-lg rounded-xl p-2 border-2" placeholder="Masukkan Nama..." required />
+            </div>
+            <div className="flex flex-col my-6">
+              <label htmlFor="email" className="font-semibold text-[12px] sm:text-sm lg:text-lg">Email</label>
+              <input type="email" name="email" className="border border-[#4D869C] text-[12px] sm:text-sm lg:text-lg rounded-xl p-2 border-2" placeholder="Masukkan Email..." required />
+            </div>
+            <div className="flex flex-col">
+              <label htmlFor="pesan" className="font-semibold text-[12px] sm:text-sm lg:text-lg">Pesan</label>
+              <textarea name="pesan" id="pesan" cols="15" className="border border-[#4D869C] text-[12px] sm:text-sm lg:text-lg rounded-xl p-2 border-2" rows="7"></textarea>
+            </div>
+            <div className="text-center my-4 sm:my-6">
+              <button type="submit" className="text-white font-semibold w-full text-[12px] sm:text-sm lg:text-lg bg-[#4D869C]/50 rounded-xl p-2 hover:bg-[#4D869C]">Kirim</button>
+            </div>
+          </form>
         </div>
       </div>
       {/* End Contact Section */}
