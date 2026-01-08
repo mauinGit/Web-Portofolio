@@ -53,7 +53,11 @@ function App() {
       {/* End Hero Section */}
 
       {/* About Section */}
-      <div className="about mt-10 lg:mt-15 xl:mt-20 animate__animated" data-aos="fade-up" data-aos-duration="1000">
+      <div
+        className="about mt-10 lg:mt-15 xl:mt-20 animate__animated"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      >
         <div className="bg-[#4D869C]/30 p-4 xl:p-8 rounded-xl md:mx-15 xl:mx-40">
           <div>
             <h1 className="text-[#4D869C] text-xl sm:text-2xl md:text-4xl xl:text-5xl font-bold text-center">
@@ -110,7 +114,10 @@ function App() {
             {listTools.map((tool) => (
               <div
                 className="group flex border border-[#4D869C] border-b-10 bg-[#D4F6FF]/30 hover:bg-[#C6E7FF]/75 gap-2 p-2 rounded-xl"
-                key={tool.id} data-aos="fade-up" data-aos-duration="1000" data-aos-delay={tool.dad}
+                key={tool.id}
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay={tool.dad}
               >
                 <div>
                   <img
@@ -146,14 +153,31 @@ function App() {
         </div>
         <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
           {listProyek.map((proyek) => (
-            <div className="border border-[#4D869C] border-b-10 bg-[#D4F6FF]/30 rounded-xl p-4" key={proyek.id} data-aos="fade-up" data-aos-duration="1000" data-aos-delay={proyek.dad}>
-              <img src={proyek.gambar} alt="ini gambar" className="object-cover items-center w-full sm:h-[245px] md:h-[150px] lg:h-[225px] h-[120px]" />
+            <div
+              className="border border-[#4D869C] border-b-10 bg-[#D4F6FF]/30 rounded-xl p-4"
+              key={proyek.id}
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-delay={proyek.dad}
+            >
+              <img
+                src={proyek.gambar}
+                alt="ini gambar"
+                className="object-cover items-center w-full sm:h-[245px] md:h-[150px] lg:h-[225px] h-[120px]"
+              />
               <div className="my-4">
-                <h3 className="py-1 md:py-2 font-bold text-xl">{proyek.nama}</h3>
-                <p className="text-[12px] sm:text-sm xl:text-lg justify-center opacity-70 md:mb-4">{proyek.desk}</p>
+                <h3 className="py-1 md:py-2 font-bold text-xl">
+                  {proyek.nama}
+                </h3>
+                <p className="text-[12px] sm:text-sm xl:text-lg justify-center opacity-70 md:mb-4">
+                  {proyek.desk}
+                </p>
                 <div className="flex flex-wrap gap-2 justify">
                   {proyek.tools.map((tool, index) => (
-                    <div className="text-[10px] sm:text-sm md:text-[12px] xl:text-lg hover:border hover:border-[#4D869C] bg-[#4D869C] hover:bg-white text-white hover:text-[#4D869C] rounded-xl p-2 mt-2" key={index}>
+                    <div
+                      className="text-[10px] sm:text-sm md:text-[12px] xl:text-lg hover:border hover:border-[#4D869C] bg-[#4D869C] hover:bg-white text-white hover:text-[#4D869C] rounded-xl p-2 mt-2"
+                      key={index}
+                    >
                       <p className="font-semibold">{tool}</p>
                     </div>
                   ))}
@@ -173,27 +197,79 @@ function App() {
       {/* End Projects Section */}
 
       {/* Contact Section */}
-      <div id="contact" className="contact my-10 md:my-20" data-aos="fade-up" data-aos-duration="1000">
+      <div
+        id="contact"
+        className="contact my-10 md:my-20"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      >
         <div className="flex flex-col items-center">
-          <h1 className="text-2xl sm:text-3xl xl:text-5xl text-[#4D869C] font-bold pb-4">Contact Me</h1>
-          <p className="opacity-70 text-[12px] sm:text-sm lg:text-lg text-center">Jika ingin memberi feedback silahkan hubungi saya</p>
+          <h1 className="text-2xl sm:text-3xl xl:text-5xl text-[#4D869C] font-bold pb-4">
+            Contact Me
+          </h1>
+          <p className="opacity-70 text-[12px] sm:text-sm lg:text-lg text-center">
+            Jika ingin memberi feedback silahkan hubungi saya
+          </p>
         </div>
         <div className=" md:mx-25 xl:mx-50">
-          <form action="https://formsubmit.co/maulanaadiatma3133@gmail.com" method="POST" className="flex flex-col bg-[#4D869C]/25 border border-[#4D869C] p-8 rounded-xl my-8 mx-auto w-fit sm:w-full" autocomplete="off">
+          <form
+            action="https://formsubmit.co/maulanaadiatma3133@gmail.com"
+            method="POST"
+            className="flex flex-col bg-[#4D869C]/25 border border-[#4D869C] p-8 rounded-xl my-8 mx-auto w-fit sm:w-full"
+            autocomplete="off"
+          >
             <div className="flex flex-col">
-              <label htmlFor="nama" className="font-semibold text-[12px] sm:text-sm lg:text-lg">Nama Lengkap</label>
-              <input type="text" name="nama" className="border border-[#4D869C] text-[12px] sm:text-sm lg:text-lg rounded-xl p-2 border-2" placeholder="Masukkan Nama..." required />
+              <label
+                htmlFor="nama"
+                className="font-semibold text-[12px] sm:text-sm lg:text-lg"
+              >
+                Nama Lengkap
+              </label>
+              <input
+                type="text"
+                name="nama"
+                className="w-full sm:w-1/2 lg:w-1/3 border border-[#4D869C] text-[12px] sm:text-sm lg:text-lg rounded-xl p-2"
+                placeholder="Masukkan Nama..."
+                required
+              />
             </div>
             <div className="flex flex-col my-6">
-              <label htmlFor="email" className="font-semibold text-[12px] sm:text-sm lg:text-lg">Email</label>
-              <input type="email" name="email" className="border border-[#4D869C] text-[12px] sm:text-sm lg:text-lg rounded-xl p-2 border-2" placeholder="Masukkan Email..." required />
+              <label
+                htmlFor="email"
+                className="font-semibold text-[12px] sm:text-sm lg:text-lg"
+              >
+                Email
+              </label>
+              <input
+                type="email"
+                name="email"
+                className="border border-[#4D869C] text-[12px] sm:text-sm lg:text-lg rounded-xl p-2 border-2"
+                placeholder="Masukkan Email..."
+                required
+              />
             </div>
             <div className="flex flex-col">
-              <label htmlFor="pesan" className="font-semibold text-[12px] sm:text-sm lg:text-lg">Pesan</label>
-              <textarea name="pesan" id="pesan" cols="10" className="border border-[#4D869C] text-[12px] sm:text-sm lg:text-lg rounded-xl p-2 border-2" rows="7"></textarea>
+              <label
+                htmlFor="pesan"
+                className="font-semibold text-[12px] sm:text-sm lg:text-lg"
+              >
+                Pesan
+              </label>
+              <textarea
+                name="pesan"
+                id="pesan"
+                cols="10"
+                className="border border-[#4D869C] text-[12px] sm:text-sm lg:text-lg rounded-xl p-2 border-2"
+                rows="7"
+              ></textarea>
             </div>
             <div className="text-center my-4 sm:my-6">
-              <button type="submit" className="text-white font-semibold w-full text-[12px] sm:text-sm lg:text-lg bg-[#4D869C]/50 rounded-xl p-2 hover:bg-[#4D869C]">Kirim</button>
+              <button
+                type="submit"
+                className="text-white font-semibold w-full text-[12px] sm:text-sm lg:text-lg bg-[#4D869C]/50 rounded-xl p-2 hover:bg-[#4D869C]"
+              >
+                Kirim
+              </button>
             </div>
           </form>
         </div>
