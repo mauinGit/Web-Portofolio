@@ -34,22 +34,22 @@ const Navbar = () => {
         }`}
       >
         <li>
-          <a href="#" className="text-sm md:text-lg xl:text-xl text-[#4D869C] md:text-white font-bold font-medium">
+          <a href="#hero" className="text-sm md:text-lg xl:text-xl text-[#4D869C] md:text-white font-bold font-medium">
             Home
           </a>
         </li>
         <li>
-          <a href="#" className="text-sm md:text-lg xl:text-xl text-[#4D869C] md:text-white font-bold font-medium">
+          <a href="#projects" className="text-sm md:text-lg xl:text-xl text-[#4D869C] md:text-white font-bold font-medium">
             Projects
           </a>
         </li>
         <li>
-          <a href="#" className="text-sm md:text-lg xl:text-xl text-[#4D869C] md:text-white font-bold font-medium">
+          <a href="#skills" className="text-sm md:text-lg xl:text-xl text-[#4D869C] md:text-white font-bold font-medium">
             Skills
           </a>
         </li>
         <li>
-          <a href="#" className="text-sm md:text-lg xl:text-xl text-[#4D869C] md:text-white font-bold font-medium">
+          <a href="#contact" className="text-sm md:text-lg xl:text-xl text-[#4D869C] md:text-white font-bold font-medium">
             Contact
           </a>
         </li>
