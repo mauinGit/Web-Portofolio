@@ -6,18 +6,21 @@ import Navbar from './components/Navbar.jsx'
 import Footer from './components/Footer.jsx'
 import Preloader from './components/Preloader.jsx'
 import 'animate.css';
-import "./index.css";
 import AOS from 'aos';
-import 'aos/dist/aos.css'; 
-AOS.init();
+import 'aos/dist/aos.css';
+
+AOS.init({
+  once: true,
+  easing: 'ease-out-cubic',
+});
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Preloader />
     <Navbar />
-    <div className="container mx-auto p-16">
+    <main className="container mx-auto px-6 sm:px-8 md:px-12 lg:px-16">
       <App />
-    </div>
+    </main>
     <Footer />
   </StrictMode>,
 )
